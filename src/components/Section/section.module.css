@@ -1,0 +1,33 @@
+.first-layout {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 1em;
+}
+
+.big-square {
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 6;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+.small-square {
+  grid-column: 4;
+  grid-row: 1 / 7;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 1em;
+}
+
+.button-see {
+  transition: all 0.2s;
+}
+.button-see:hover {
+  background: #453132 !important;
+  color: #fff !important;
+}
