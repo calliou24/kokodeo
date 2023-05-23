@@ -18,7 +18,9 @@ function Section() {
       <div
         style={{
           width: "60vw",
+          minWidth: "1000px",
           height: "60vh",
+          minHeight: "600px",
           borderRadius: "20px",
           background: "rgba(255,255,255, 0.3)",
           margin: "auto",
