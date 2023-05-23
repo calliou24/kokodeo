@@ -284,12 +284,8 @@ function Section() {
             </div>
           </motion.div>
         )}
-        {showSection === 3 && (
-          <div class="grid-container">
-            <div class="item small-square">Cuadrado pequeño (2x2)</div>
-            <div class="item large-rectangle">Cuadro grande</div>
-          </div>
-        )}
+        {/* {showSection === 3 && (
+        )} */}
       </div>
     </AnimatePresence>
   );

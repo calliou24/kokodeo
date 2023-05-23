@@ -46,25 +46,3 @@
   flex-direction: column;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-gap: 10px;
-  margin: 0 auto;
-}
-
-.item {
-  border: 1px solid black;
-  padding: 10px;
-}
-
-.small-square {
-  grid-column: 5 / span 2;
-  grid-row: 1 / span 2;
-}
-
-.large-rectangle {
-  grid-column: 1 / span 6;
-  grid-row: 3 / span 3;
-}
