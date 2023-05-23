@@ -9,6 +9,7 @@ import leafs from "../../assets/images/leafs.png";
 import cocoIcon from "../../assets/images/coco-icon.png";
 
 import kokodeoLogo from "../../assets/images/kokodeo-logo.svg";
+import ImageLogo from "../../assets/images/componentIcons/imageLogo";
 
 function Section() {
   const [showSection, setShowSection] = useState(1);
@@ -20,7 +21,7 @@ function Section() {
           width: "60vw",
           minWidth: "1000px",
           height: "60vh",
-          minHeight: "600px",
+          minHeight: "450px",
           borderRadius: "20px",
           background: "rgba(255,255,255, 0.3)",
           margin: "auto",
@@ -39,9 +40,14 @@ function Section() {
             top: "-30px",
             cursor: "pointer",
             width: "100px",
+
             transform: "rotate(-60deg)",
+            zIndex: 1000,
           }}
         />
+        {/* <img
+        
+        /> */}
         <img
           src={cocoIcon}
           style={{
@@ -51,6 +57,7 @@ function Section() {
             cursor: "pointer",
             width: "100px",
             transform: "rotate(-60deg)",
+            zIndex: 1000,
           }}
         />
         {showSection !== 1 && (
@@ -126,16 +133,25 @@ function Section() {
             transition={{ duration: 0.3 }}
             className={styles["first-layout"]}
           >
-            <div className={styles["big-square"]}>
+            <div
+              style={{
+                position: "relative",
+              }}
+              className={styles["big-square"]}
+            >
               <h1
                 style={{
                   textAlign: "center",
                   fontSize: "4rem",
-                  fontFamily: "antebas",
+                  fontFamily: "girloy",
                   color: "#453132",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "0.5em",
                 }}
               >
-                SOBRE NOSOTROS
+                sobre nosotros
               </h1>
               <p
                 style={{
@@ -170,7 +186,7 @@ function Section() {
                 Saber más
               </button>
             </div>
-            <div className={styles["small-square"]}>
+            {/* <div className={styles["small-square"]}>
               <h3
                 style={{
                   textAlign: "center",
@@ -194,7 +210,7 @@ function Section() {
                 desde nuestra integridad, brindemos productos que impacten
                 positivamente en nuestros medios.
               </p>
-            </div>
+            </div> */}
           </motion.div>
         )}
         {showSection === 2 && (
@@ -222,15 +238,57 @@ function Section() {
               style={{
                 borderRadius: "20px",
                 background: "rgba(255,255,255, 1)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
-            ></div>
+            >
+              <ImageLogo />
+            </div>
             <div
               style={{
                 borderRadius: "20px",
-                background: "rgba(255,255,255, 1)",
+                background: "#FFF",
+                padding: "1em",
+                display: "grid",
+                placeItems: "center",
               }}
-            ></div>
+            >
+              <h2
+                style={{
+                  textAlign: "center",
+                  fontSize: "2rem",
+                  fontFamily: "girloy",
+                  color: "#453132",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "0.5em",
+                }}
+              >
+                filosofía
+              </h2>
+              <p
+                style={{
+                  textAlign: "center",
+                  fontSize: "1.3rem",
+                  margin: "auto",
+                  color: "#0009",
+                }}
+              >
+                La filosofía de “Kokodeo” es lograr un equilibrio entre la
+                búsqueda de un bienestar humano, como una responsabilidad donde
+                desde nuestra integridad, brindemos productos que impacten
+                positivamente en nuestros medios.
+              </p>
+            </div>
           </motion.div>
+        )}
+        {showSection === 3 && (
+          <div class="grid-container">
+            <div class="item small-square">Cuadrado pequeño (2x2)</div>
+            <div class="item large-rectangle">Cuadro grande</div>
+          </div>
         )}
       </div>
     </AnimatePresence>
