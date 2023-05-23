@@ -31,7 +31,6 @@ function Section() {
           padding: "2em",
         }}
       >
-        a
         <img
           src={leafs}
           style={{
