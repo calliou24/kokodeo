@@ -94,7 +94,7 @@ function Section() {
               right: "-25",
             }}
             onClick={() => {
-              if (showSection <= 2)
+              if (showSection <= 3)
                 setShowSection((showSection) => showSection + 1);
             }}
             color="#99A98F"
@@ -221,8 +221,201 @@ function Section() {
             </div>
           </motion.div>
         )}
-        {/* {showSection === 3 && (
-        )} */}
+        {showSection === 3 && (
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            exit={{
+              opacity: 0,
+            }}
+            transition={{ duration: 1 }}
+            className="w-full h-full overflow-hidden"
+            style={{
+              display: "grid",
+              gap: "1em",
+              gridTemplateColumns: "repeat(2, 1fr)",
+              gridTemplateRows: "repeat(2, 1fr)",
+            }}
+          >
+            <div
+              className={`${styles?.["white-square"]} flex`}
+              style={{
+                flexDirection: "column",
+                gap: "1em",
+              }}
+            >
+              <h3
+                className={`flex flex-center ${styles?.["title-brown"]}`}
+                style={{
+                  color: "#85586F",
+                  fontSize: "1.5rem",
+                }}
+              >
+                fortalezas
+              </h3>
+              <p className="text-center">
+                Como empresa tenemos la oportunidad de aprovechar infinidad de
+                medios y recursos para darnos a conocer, proveernos de
+                innovación y estabilidad financiera. Somos un equipo completo
+                que maneja bien sus inversiones y ganancias.
+              </p>
+            </div>
+            <div
+              className={`${styles?.["white-square"]} flex`}
+              style={{
+                flexDirection: "column",
+                gap: "1em",
+              }}
+            >
+              <h3
+                className={`flex flex-center ${styles?.["title-brown"]}`}
+                style={{
+                  color: "#ABC4AA",
+                  fontSize: "1.5rem",
+                }}
+              >
+                oportunidades
+              </h3>
+              <p className="text-center">
+                Un mercado de oportunidades que explotar. La utilización de
+                herramientas digitales y diferentes medios, entre ellos algunos
+                no físicos para el ahorramiento de rentas, recursos y energía.
+              </p>
+            </div>
+            <div
+              className={`${styles?.["white-square"]} flex`}
+              style={{
+                flexDirection: "column",
+                gap: "1em",
+              }}
+            >
+              <h3
+                className={`flex flex-center ${styles?.["title-brown"]}`}
+                style={{
+                  color: "#65647C",
+                  fontSize: "1.5rem",
+                }}
+              >
+                debilidades
+              </h3>
+              <p className="text-center">
+                Tenemos cierta incertidumbre de los fenómenos que puedan afectar
+                la economía global.
+              </p>
+            </div>
+            <div
+              className={`${styles?.["white-square"]} flex`}
+              style={{
+                flexDirection: "column",
+                gap: "1em",
+              }}
+            >
+              <h3
+                className={`flex flex-center ${styles?.["title-brown"]}`}
+                style={{
+                  color: "#2C3639",
+                  fontSize: "1.5rem",
+                }}
+              >
+                amenazas
+              </h3>
+              <p className="text-center">
+                Las constante competencia y cambio en el sistema financiero.
+              </p>
+            </div>
+          </motion.div>
+        )}
+        {showSection === 4 && (
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            exit={{
+              opacity: 0,
+            }}
+            transition={{ duration: 1 }}
+            className="w-full h-full overflow-hidden"
+            style={{
+              display: "grid",
+              gap: "1em",
+              gridTemplateColumns: "repeat(2, 1fr)",
+            }}
+          >
+            <div
+              className={`${styles?.["white-square"]} flex select-none`}
+              style={{
+                flexDirection: "column",
+              }}
+            >
+              <h2
+                className={`flex flex-center ${styles?.["title-brown"]}`}
+                style={{
+                  fontSize: "2rem",
+                  gap: "0.5em",
+                }}
+              >
+                misión
+              </h2>
+              <p
+                className="text-center"
+                style={{
+                  margin: "auto",
+                }}
+              >
+                Ofrecer productos de higiene personal, interesándonos en todo
+                momento del bienestar que brindemos a nuestros clientes y del
+                impacto que generemos en nuestro ambiente.
+                <br />
+                <br /> Nuestro compromiso es elaborar un desodorante de coco que
+                cumpla con los más altos estándares de calidad, utilizando
+                ingredientes naturales y orgánicos. Nos esforzamos por minimizar
+                el impacto ambiental en todas las etapas de producción, desde la
+                obtención de los materiales hasta el envasado y distribución del
+                producto.
+              </p>
+            </div>
+            <div
+              className={`${styles?.["white-square"]} select-none flex`}
+              style={{
+                flexDirection: "column",
+              }}
+            >
+              <h2
+                className={`flex flex-center ${styles?.["title-brown"]}`}
+                style={{
+                  fontSize: "2rem",
+                  gap: "0.5em",
+                }}
+              >
+                visión
+              </h2>
+              <p
+                className="text-center"
+                style={{
+                  margin: "auto",
+                }}
+              >
+                Ser un organismo socialmente sustentable, donde nuestro
+                liderazgo, aproveche oportunidades de innovación en la
+                proyección de nuestros productos y en la transmisión de
+                emociones positivas para la sociedad.
+                <br />
+                <br />
+                Nuestra visión va más allá de la comercialización de un
+                desodorante de coco sustentable. Buscamos generar un impacto
+                positivo en la sociedad y en el entorno natural, promoviendo un
+                cambio hacia un estilo de vida más consciente y responsable.
+              </p>
+            </div>
+          </motion.div>
+        )}
       </div>
     </AnimatePresence>
   );
