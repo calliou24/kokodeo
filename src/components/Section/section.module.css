@@ -1,3 +1,14 @@
+.white-square {
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 1);
+  padding: 1em;
+}
+
+.title-brown {
+  font-family: girloy;
+  color: #453132;
+}
+
 .first-layout {
   width: 100%;
   height: 100%;
@@ -25,9 +36,36 @@
 }
 
 .button-see {
+  border: 4px solid #453132;
+  background: transparent;
+  padding: 20px;
+  border-radius: 0.5em;
+  font-weight: bold;
+  font-size: 1.4em;
+  cursor: pointer;
   transition: all 0.2s;
 }
 .button-see:hover {
   background: #453132 !important;
   color: #fff !important;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.button-circle {
+  position: absolute;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0px 0px 28px -3px rgba(0, 0, 0, 0.3);
+}
+
+.corner-images {
+  position: absolute;
+  cursor: pointer;
+  width: 100px;
+  transform: rotate(-60deg);
+  z-index: 1000;
+  user-select: none;
 }

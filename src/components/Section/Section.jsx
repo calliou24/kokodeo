@@ -17,47 +17,35 @@ function Section() {
   return (
     <AnimatePresence>
       <div
+        className="flex flex-center white-square"
         style={{
           width: "60vw",
           minWidth: "1000px",
           height: "60vh",
           minHeight: "450px",
-          borderRadius: "20px",
           background: "rgba(255,255,255, 0.3)",
           margin: "auto",
           position: "relative",
-          display: "flex",
-
-          alignItems: "center",
           padding: "2em",
         }}
       >
         <img
           src={leafs}
+          className={styles?.["corner-images"]}
           style={{
-            position: "absolute",
             left: "-20px",
             top: "-30px",
-            cursor: "pointer",
-            width: "100px",
-
-            transform: "rotate(-60deg)",
-            zIndex: 1000,
           }}
         />
         {/* <img
         
         /> */}
         <img
+          className={styles?.["corner-images"]}
           src={cocoIcon}
           style={{
-            position: "absolute",
             right: "-20px",
             bottom: "-30px",
-            cursor: "pointer",
-            width: "100px",
-            transform: "rotate(-60deg)",
-            zIndex: 1000,
           }}
         />
         {showSection !== 1 && (
@@ -74,13 +62,10 @@ function Section() {
             transition={{ duration: 0.3 }}
           >
             <FaChevronCircleRight
+              className={styles?.["button-circle"]}
               style={{
-                position: "absolute",
                 left: "-25",
-                cursor: "pointer",
-                borderRadius: "50%",
                 transform: " rotateZ(-180deg)",
-                boxShadow: "0px 0px 28px -3px rgba(0,0,0,0.3)",
               }}
               color="#99A98F"
               onClick={() => {
@@ -104,12 +89,9 @@ function Section() {
           transition={{ duration: 0.3 }}
         >
           <FaChevronCircleRight
+            className={styles?.["button-circle"]}
             style={{
-              position: "absolute",
               right: "-25",
-              cursor: "pointer",
-              borderRadius: "50%",
-              boxShadow: "0px 0px 28px -3px rgba(0,0,0,0.3)",
             }}
             onClick={() => {
               if (showSection <= 2)
@@ -140,14 +122,10 @@ function Section() {
               className={styles["big-square"]}
             >
               <h1
+                className={`${styles?.["title-brown"]} flex flex-center`}
                 style={{
                   textAlign: "center",
                   fontSize: "4rem",
-                  fontFamily: "girloy",
-                  color: "#453132",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
                   gap: "0.5em",
                 }}
               >
@@ -156,9 +134,7 @@ function Section() {
               <p
                 style={{
                   textAlign: "center",
-                  fontSize: "1.3rem",
                   margin: "auto",
-                  color: "#0009",
                 }}
               >
                 “Kokodeo” es una sociedad de empresarios visionarios en un
@@ -169,15 +145,7 @@ function Section() {
                 higiene y confort a las personas que lo utilizan.
               </p>
               <button
-                style={{
-                  border: "4px solid #453132",
-                  background: "transparent",
-                  padding: "20px",
-                  borderRadius: "0.5em",
-                  fontWeight: "bold",
-                  fontSize: "1.4em",
-                  cursor: "pointer",
-                }}
+                style={{}}
                 onClick={() => {
                   setShowSection(2);
                 }}
@@ -186,31 +154,6 @@ function Section() {
                 Saber más
               </button>
             </div>
-            {/* <div className={styles["small-square"]}>
-              <h3
-                style={{
-                  textAlign: "center",
-                  fontSize: "2rem",
-                  fontFamily: "antebas",
-                  color: "#453132",
-                }}
-              >
-                FILOSOFÍA
-              </h3>
-              <p
-                style={{
-                  textAlign: "center",
-                  fontSize: "1.3rem",
-                  margin: "20px auto",
-                  color: "#0009",
-                }}
-              >
-                La filosofía de “Kokodeo” es lograr un equilibrio entre la
-                búsqueda de un bienestar humano, como una responsabilidad donde
-                desde nuestra integridad, brindemos productos que impacten
-                positivamente en nuestros medios.
-              </p>
-            </div> */}
           </motion.div>
         )}
         {showSection === 2 && (
@@ -225,55 +168,49 @@ function Section() {
               opacity: 0,
             }}
             transition={{ duration: 1 }}
+            className="w-full h-full overflow-hidden"
             style={{
               display: "grid",
               gap: "1em",
               gridTemplateColumns: "repeat(2, 1fr)",
-              width: "100%",
-              height: "100%",
-              overflow: "hidden",
+              gridTemplateRows: "repeat(4, 1fr)",
             }}
           >
             <div
+              className={`${styles?.["white-square"]} flex flex-center select-none`}
               style={{
-                borderRadius: "20px",
-                background: "rgba(255,255,255, 1)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
+                gridRow: "1 / 6",
               }}
             >
               <ImageLogo />
             </div>
             <div
+              className={`${styles?.["white-square"]} select-none flex flex-center`}
               style={{
-                borderRadius: "20px",
-                background: "#FFF",
-                padding: "1em",
-                display: "grid",
-                placeItems: "center",
+                gridRow: "1 / 2",
+                gridColumn: "2/2",
               }}
             >
               <h2
+                className={`flex flex-center ${styles?.["title-brown"]}`}
                 style={{
-                  textAlign: "center",
                   fontSize: "2rem",
-                  fontFamily: "girloy",
-                  color: "#453132",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
                   gap: "0.5em",
                 }}
               >
                 filosofía
               </h2>
+            </div>
+            <div
+              className={`${styles?.["white-square"]} flex flex-center`}
+              style={{
+                gridRow: "2 / 6",
+              }}
+            >
               <p
                 style={{
                   textAlign: "center",
-                  fontSize: "1.3rem",
                   margin: "auto",
-                  color: "#0009",
                 }}
               >
                 La filosofía de “Kokodeo” es lograr un equilibrio entre la

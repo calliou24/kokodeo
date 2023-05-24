@@ -32,6 +32,11 @@
   --header-background: #f0ebe8;
 }
 
+p {
+  font-size: 1.3rem;
+  color: #0009;
+}
+
 .header {
   background-color: var(--header-background);
   width: 100vw;
@@ -46,3 +51,22 @@
   flex-direction: column;
 }
 
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.select-none {
+  user-select: none;
+}
+
+.w-full {
+  width: 100%;
+}
+.h-full {
+  height: 100%;
+}
