@@ -2,9 +2,13 @@ import * as React from "react";
 const ImageLogo = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={301}
+    // width={310}
     height={300}
     fill="none"
+    style={{
+      objectFit: "cover",
+      width: "100%",
+    }}
     {...props}
   >
     <path

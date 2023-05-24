@@ -70,7 +70,9 @@
   position: relative;
   /* margin: auto; */
   width: 60vw;
-  min-height: fit-content;
+  min-width: 1100px;
+  border-radius: 20px;
+  height: fit-content;
   background: rgba(255, 255, 255, 0.3) !important;
   padding: 2em;
 }
@@ -96,8 +98,8 @@
 .grid-third {
   display: grid;
   gap: 1em;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); 
+   grid-template-rows: repeat(2, auto);
 }
 
 .four-container {

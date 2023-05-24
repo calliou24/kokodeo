@@ -37,6 +37,10 @@ p {
   color: #0009;
 }
 
+body{ 
+  overflow-x:hidden
+}
+
 .header {
   background-color: var(--header-background);
   width: 100vw;
@@ -59,7 +63,7 @@ p {
   gap: 2em;
   width: fit-content;
   height: fit-content;
-  margin-top: 3em;
+  /* margin-top: 3em; */
 }
 
 .white-square {
@@ -102,6 +106,9 @@ p {
 }
 
 @media (max-width: 50em) {
+  .app{ 
+    margin: 2em 0 0 0;
+  }
   .left-arrow {
     left: -20px !important;
   }

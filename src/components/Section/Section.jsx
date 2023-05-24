@@ -4,21 +4,17 @@ import { FaChevronCircleRight } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "./section.module.css";
 
-import ilustration from "../../assets/images/container-paper.jpg";
 import leafs from "../../assets/images/leafs.png";
 import cocoIcon from "../../assets/images/coco-icon.png";
 
-import kokodeoLogo from "../../assets/images/kokodeo-logo.svg";
 import ImageLogo from "../../assets/images/componentIcons/imageLogo";
-
+import logoImage from "../../assets/images/logo-image.jpg";
 function Section() {
   const [showSection, setShowSection] = useState(1);
 
   return (
     <AnimatePresence>
-      <div
-        className={`${styles?.["main-container"]} flex flex-center white-square `}
-      >
+      <div className={`${styles?.["main-container"]} flex flex-center `}>
         <img
           src={leafs}
           className={styles?.["corner-images"]}
@@ -164,8 +160,18 @@ function Section() {
           >
             <div
               className={`${styles?.["grid-second-first"]} flex flex-center select-none white-square`}
+              style={{
+                padding: "2em",
+              }}
             >
-              <ImageLogo />
+              <img
+                src={logoImage}
+                style={{
+                  objectFit: "cover",
+                  width: "100%",
+                }}
+              />
+              {/* <ImageLogo /> */}
             </div>
             <div
               className={`${styles?.["grid-second-second"]} select-none flex flex-center white-square`}
@@ -230,8 +236,7 @@ function Section() {
               <p className="text-center">
                 Como empresa tenemos la oportunidad de aprovechar infinidad de
                 medios y recursos para darnos a conocer, proveernos de
-                innovación y estabilidad financiera. Somos un equipo completo
-                que maneja bien sus inversiones y ganancias.
+                innovación y estabilidad financiera.
               </p>
             </div>
             <div
@@ -261,6 +266,7 @@ function Section() {
               style={{
                 flexDirection: "column",
                 gap: "1em",
+                height: "fit-content",
               }}
             >
               <h3
@@ -282,6 +288,7 @@ function Section() {
               style={{
                 flexDirection: "column",
                 gap: "1em",
+                // height: "fit-content",
               }}
             >
               <h3
