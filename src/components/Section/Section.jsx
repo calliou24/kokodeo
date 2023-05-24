@@ -62,7 +62,7 @@ function Section() {
             />
           </motion.div>
         )}
-        {showSection !== 4 && (
+        {showSection !== 5 && (
           <motion.div
             initial={{
               opacity: 0,
@@ -81,7 +81,7 @@ function Section() {
                 right: "-25",
               }}
               onClick={() => {
-                if (showSection <= 3)
+                if (showSection <= 4)
                   setShowSection((showSection) => showSection + 1);
               }}
               color="#99A98F"
@@ -169,6 +169,7 @@ function Section() {
                 style={{
                   objectFit: "cover",
                   width: "100%",
+                  maxWidth: "350px",
                 }}
               />
               {/* <ImageLogo /> */}
@@ -347,10 +348,7 @@ function Section() {
                 <br />
                 <br /> Nuestro compromiso es elaborar un desodorante de coco que
                 cumpla con los más altos estándares de calidad, utilizando
-                ingredientes naturales y orgánicos. Nos esforzamos por minimizar
-                el impacto ambiental en todas las etapas de producción, desde la
-                obtención de los materiales hasta el envasado y distribución del
-                producto.
+                ingredientes naturales y orgánicos.
               </p>
             </div>
             <div
@@ -381,16 +379,88 @@ function Section() {
                 <br />
                 <br />
                 Nuestra visión va más allá de la comercialización de un
-                desodorante de coco sustentable. Buscamos generar un impacto
-                positivo en la sociedad y en el entorno natural, promoviendo un
-                cambio hacia un estilo de vida más consciente y responsable.
+                desodorante de coco sustentable.
               </p>
+            </div>
+          </motion.div>
+        )}
+        {showSection === 5 && (
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            exit={{
+              opacity: 0,
+            }}
+            transition={{ duration: 1 }}
+            className={`w-full h-full overflow-hidden ${styles?.["five-container"]}`}
+          >
+            <div
+              className={`white-square ${styles?.["five-one"]}`}
+              style={{
+                height: "fit-content",
+              }}
+            >
+              <h3
+                className={`${styles?.["title-brown"]} text-center`}
+                style={{
+                  fontSize: "1.5rem",
+                }}
+              >
+                ventajas competitivas
+              </h3>
+            </div>
+            <div className={styles?.["inside-five"]}>
+              <div
+                className={`white-square text-center ${styles?.["five-two"]}`}
+              >
+                <h4>Destacamos en el mercado</h4>{" "}
+                <p>
+                  {" "}
+                  Gracias a la calidad y utilidad que caracteriza nuestros
+                  productos, nos vemos posicionados en una empresa destacada y
+                  reconocida a nivel nacional.
+                </p>
+              </div>
+              <div
+                className={`white-square  text-center ${styles?.["five-three"]}`}
+              >
+                <h4>Competitividad comercial</h4>{" "}
+                <p>
+                  Ofrecemos variedad de productos encaminados en el marco de la
+                  accesibilidad económica para poblaciones equilibradas
+                  financieramente.
+                </p>
+              </div>
+              <div
+                className={`white-square  text-center ${styles?.["five-four"]}`}
+              >
+                <h4>Generamos emociones</h4>{" "}
+                <p>
+                  Dentro de nuestros valores, el ofrecimiento de emociones
+                  asociadas con la seguridad, el bienestar y el confort son
+                  puntos clave a destacar.
+                </p>
+              </div>
+              <div
+                className={`white-square  text-center ${styles?.["five-five"]}`}
+              >
+                <h4>Innovador e inteligente</h4>{" "}
+                <p>
+                  Nuestro equipo brillante no pierde de vista la importancia de
+                  reflejar una imagen estética e innovadora.{" "}
+                </p>
+              </div>
             </div>
           </motion.div>
         )}
       </div>
     </AnimatePresence>
   );
+  ``;
 }
 
 export default Section;
