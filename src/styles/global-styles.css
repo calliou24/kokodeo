@@ -40,7 +40,7 @@ p {
 .header {
   background-color: var(--header-background);
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url("../assets/images/minimal-plant.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -48,7 +48,24 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  overflow-x: hidden;
+}
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
+  gap: 2em;
+  width: fit-content;
+  height: fit-content;
+  margin-top: 3em;
+}
+
+.white-square {
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 1);
+  padding: 1em;
 }
 
 .flex {
@@ -73,4 +90,22 @@ p {
 
 .text-center {
   text-align: center;
+}
+
+.left-arrow {
+  left: -25px;
+  z-index: 300;
+}
+.right-arrow {
+  right: -25px;
+  z-index: 300;
+}
+
+@media (max-width: 50em) {
+  .left-arrow {
+    left: -20px !important;
+  }
+  .right-arrow {
+    right: -20px !important;
+  }
 }

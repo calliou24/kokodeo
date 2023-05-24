@@ -7,7 +7,7 @@ export const NavBar = (props) => {
       style={{
         display: "flex",
         justifyContent: "center",
-        padding: "15px 0 ",
+        // padding: "15px 0 ",
       }}
     >
       <LogoIcon />

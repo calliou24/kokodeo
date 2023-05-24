@@ -17,17 +17,7 @@ function Section() {
   return (
     <AnimatePresence>
       <div
-        className="flex flex-center white-square"
-        style={{
-          width: "60vw",
-          minWidth: "1000px",
-          height: "60vh",
-          minHeight: "450px",
-          background: "rgba(255,255,255, 0.3)",
-          margin: "auto",
-          position: "relative",
-          padding: "2em",
-        }}
+        className={`${styles?.["main-container"]} flex flex-center white-square `}
       >
         <img
           src={leafs}
@@ -62,7 +52,7 @@ function Section() {
             transition={{ duration: 0.3 }}
           >
             <FaChevronCircleRight
-              className={styles?.["button-circle"]}
+              className={`${styles?.["button-circle"]} left-arrow`}
               style={{
                 left: "-25",
                 transform: " rotateZ(-180deg)",
@@ -76,31 +66,33 @@ function Section() {
             />
           </motion.div>
         )}
-        <motion.div
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 1,
-          }}
-          exit={{
-            opacity: 0,
-          }}
-          transition={{ duration: 0.3 }}
-        >
-          <FaChevronCircleRight
-            className={styles?.["button-circle"]}
-            style={{
-              right: "-25",
+        {showSection !== 4 && (
+          <motion.div
+            initial={{
+              opacity: 0,
             }}
-            onClick={() => {
-              if (showSection <= 3)
-                setShowSection((showSection) => showSection + 1);
+            animate={{
+              opacity: 1,
             }}
-            color="#99A98F"
-            fontSize={50}
-          />
-        </motion.div>
+            exit={{
+              opacity: 0,
+            }}
+            transition={{ duration: 0.3 }}
+          >
+            <FaChevronCircleRight
+              className={`${styles?.["button-circle"]} right-arrow`}
+              style={{
+                right: "-25",
+              }}
+              onClick={() => {
+                if (showSection <= 3)
+                  setShowSection((showSection) => showSection + 1);
+              }}
+              color="#99A98F"
+              fontSize={50}
+            />
+          </motion.div>
+        )}
         {showSection === 1 && (
           <motion.div
             initial={{
@@ -168,28 +160,15 @@ function Section() {
               opacity: 0,
             }}
             transition={{ duration: 1 }}
-            className="w-full h-full overflow-hidden"
-            style={{
-              display: "grid",
-              gap: "1em",
-              gridTemplateColumns: "repeat(2, 1fr)",
-              gridTemplateRows: "repeat(4, 1fr)",
-            }}
+            className={`w-full h-full overflow-hidden ${styles?.["grid-second"]}`}
           >
             <div
-              className={`${styles?.["white-square"]} flex flex-center select-none`}
-              style={{
-                gridRow: "1 / 6",
-              }}
+              className={`${styles?.["grid-second-first"]} flex flex-center select-none white-square`}
             >
               <ImageLogo />
             </div>
             <div
-              className={`${styles?.["white-square"]} select-none flex flex-center`}
-              style={{
-                gridRow: "1 / 2",
-                gridColumn: "2/2",
-              }}
+              className={`${styles?.["grid-second-second"]} select-none flex flex-center white-square`}
             >
               <h2
                 className={`flex flex-center ${styles?.["title-brown"]}`}
@@ -202,10 +181,7 @@ function Section() {
               </h2>
             </div>
             <div
-              className={`${styles?.["white-square"]} flex flex-center`}
-              style={{
-                gridRow: "2 / 6",
-              }}
+              className={`${styles?.["grid-second-thrid"]} flex flex-center white-square`}
             >
               <p
                 style={{
@@ -233,16 +209,10 @@ function Section() {
               opacity: 0,
             }}
             transition={{ duration: 1 }}
-            className="w-full h-full overflow-hidden"
-            style={{
-              display: "grid",
-              gap: "1em",
-              gridTemplateColumns: "repeat(2, 1fr)",
-              gridTemplateRows: "repeat(2, 1fr)",
-            }}
+            className={` ${styles?.["grid-third"]} w-full h-full overflow-hidden`}
           >
             <div
-              className={`${styles?.["white-square"]} flex`}
+              className={`${styles?.[""]} flex white-square`}
               style={{
                 flexDirection: "column",
                 gap: "1em",
@@ -265,7 +235,7 @@ function Section() {
               </p>
             </div>
             <div
-              className={`${styles?.["white-square"]} flex`}
+              className={`${styles?.[""]} flex white-square`}
               style={{
                 flexDirection: "column",
                 gap: "1em",
@@ -287,7 +257,7 @@ function Section() {
               </p>
             </div>
             <div
-              className={`${styles?.["white-square"]} flex`}
+              className={`${styles?.[""]} flex white-square`}
               style={{
                 flexDirection: "column",
                 gap: "1em",
@@ -308,7 +278,7 @@ function Section() {
               </p>
             </div>
             <div
-              className={`${styles?.["white-square"]} flex`}
+              className={`${styles?.[""]} flex white-square`}
               style={{
                 flexDirection: "column",
                 gap: "1em",
@@ -341,15 +311,10 @@ function Section() {
               opacity: 0,
             }}
             transition={{ duration: 1 }}
-            className="w-full h-full overflow-hidden"
-            style={{
-              display: "grid",
-              gap: "1em",
-              gridTemplateColumns: "repeat(2, 1fr)",
-            }}
+            className={`w-full h-full overflow-hidden ${styles?.["four-container"]}`}
           >
             <div
-              className={`${styles?.["white-square"]} flex select-none`}
+              className={`${styles?.[""]} flex select-none white-square`}
               style={{
                 flexDirection: "column",
               }}
@@ -382,7 +347,7 @@ function Section() {
               </p>
             </div>
             <div
-              className={`${styles?.["white-square"]} select-none flex`}
+              className={`${styles?.[""]} select-none flex white-square`}
               style={{
                 flexDirection: "column",
               }}
