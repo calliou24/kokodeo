@@ -9,6 +9,34 @@ import cocoIcon from "../../assets/images/coco-icon.png";
 
 import ImageLogo from "../../assets/images/componentIcons/imageLogo";
 import logoImage from "../../assets/images/logo-image.jpg";
+
+//ADQ
+import ad1 from "../../assets/images/adquisision/1.jpg";
+import ad2 from "../../assets/images/adquisision/2.jpg";
+import ad3 from "../../assets/images/adquisision/3.jpg";
+import ad4 from "../../assets/images/adquisision/4.jpg";
+import ad5 from "../../assets/images/adquisision/5.jpg";
+import ad6 from "../../assets/images/adquisision/6.jpg";
+import ad7 from "../../assets/images/adquisision/7.jpg";
+import ad8 from "../../assets/images/adquisision/8.jpg";
+
+//PROD
+import pro1 from "../../assets/images/produccion/1.jpg";
+import pro2 from "../../assets/images/produccion/2.jpg";
+import pro3 from "../../assets/images/produccion/3.jpg";
+import pro4 from "../../assets/images/produccion/4.jpg";
+import pro5 from "../../assets/images/produccion/5.jpg";
+import pro6 from "../../assets/images/produccion/6.jpg";
+import pro7 from "../../assets/images/produccion/7.jpg";
+import pro8 from "../../assets/images/produccion/8.jpg";
+import pro9 from "../../assets/images/produccion/9.jpg";
+import pro10 from "../../assets/images/produccion/10.jpg";
+import pro11 from "../../assets/images/produccion/11.jpg";
+import pro12 from "../../assets/images/produccion/12.jpg";
+import pro13 from "../../assets/images/produccion/13.jpg";
+import pro14 from "../../assets/images/produccion/14.jpg";
+import pro15 from "../../assets/images/produccion/15.jpg";
+
 function Section() {
   const [showSection, setShowSection] = useState(1);
 
@@ -62,7 +90,7 @@ function Section() {
             />
           </motion.div>
         )}
-        {showSection !== 5 && (
+        {showSection !== 7 && (
           <motion.div
             initial={{
               opacity: 0,
@@ -81,7 +109,7 @@ function Section() {
                 right: "-25",
               }}
               onClick={() => {
-                if (showSection <= 4)
+                if (showSection <= 6)
                   setShowSection((showSection) => showSection + 1);
               }}
               color="#99A98F"
@@ -456,6 +484,70 @@ function Section() {
               </div>
             </div>
           </motion.div>
+        )}
+        {showSection === 6 && (
+          <div
+            className="w-full h-full flex flex-center"
+            style={{
+              flexDirection: "column",
+              gap: "1em",
+            }}
+          >
+            <div className="white-square w-full text-center">
+              <h2 className={styles?.["title-brown"]}>
+                proceso de adquisision
+              </h2>
+            </div>
+            <div
+              className={`white-square flex flex-center w-full ${styles?.["adq-cont"]}`}
+            >
+              <img className={styles?.["image"]} src={ad5} />
+              <img className={styles?.["image"]} src={ad7} />
+              <img className={styles?.["image"]} src={ad1} />
+              <img className={styles?.["image"]} src={ad2} />
+
+              <img className={styles?.["image"]} src={ad4} />
+
+              <img className={styles?.["image"]} src={ad6} />
+
+              <img className={styles?.["image"]} src={ad8} />
+
+              <img className={styles?.["image"]} src={pro15} />
+            </div>
+          </div>
+        )}
+        {showSection === 7 && (
+          <div
+            className="w-full h-full flex flex-center"
+            style={{
+              flexDirection: "column",
+              gap: "1em",
+            }}
+          >
+            <div className="white-square w-full text-center">
+              <h2 className={styles?.["title-brown"]}>proceso de produccion</h2>
+            </div>
+            <div
+              className={`white-square flex flex-center w-full ${styles?.["adq-cont"]}`}
+            >
+              <img className={styles?.["image"]} src={pro1} />
+              <img className={styles?.["image"]} src={pro2} />
+              <img className={styles?.["image"]} src={pro3} />
+
+              <img className={styles?.["image"]} src={pro4} />
+
+              <img className={styles?.["image"]} src={pro7} />
+              <img className={styles?.["image"]} src={pro6} />
+              <img className={styles?.["image"]} src={pro5} />
+              <img className={styles?.["image"]} src={pro8} />
+              <img className={styles?.["image"]} src={pro9} />
+              <img className={styles?.["image"]} src={pro10} />
+              <img className={styles?.["image"]} src={pro11} />
+              <img className={styles?.["image"]} src={pro12} />
+              <img className={styles?.["image"]} src={pro13} />
+              <img className={styles?.["image"]} src={pro14} />
+            </div>
+          </div>
         )}
       </div>
     </AnimatePresence>
