@@ -90,7 +90,7 @@ function Section() {
             />
           </motion.div>
         )}
-        {showSection !== 7 && (
+        {showSection !== 7 && showSection !== 1 && (
           <motion.div
             initial={{
               opacity: 0,
